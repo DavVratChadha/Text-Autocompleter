@@ -4,8 +4,6 @@
 #include <string.h>
 #include <ctype.h>
 
-///////////////////////////////////////////////// helper functions ////////////////////////////////////////////////////
-
 double power(double base, double exponent){
     int i;
 
@@ -58,7 +56,6 @@ double string_weight_to_double(char *weight_string){
     return weight;
 }
 
-///////////////////////////////////////////////// Part 1 /////////////////////////////////////////////////////////////////
 
 void read_in_line(char *line, double *weight, char* aterm){
 //This function takes a line in the file, a pointer to a double and a pointer to a string
@@ -136,7 +133,6 @@ void read_in_terms(struct term **terms, int *pnterms, char *filename){
 
 }
 
-/////////////////////////////////////////////// Part 2 a //////////////////////////////////////////////////////////////
 
 int lowest_match(struct term *terms, int nterms, char *substr){
     int LHS = 0;
@@ -161,7 +157,6 @@ int lowest_match(struct term *terms, int nterms, char *substr){
     };
 }
 
-/////////////////////////////////////////////// Part 2 b //////////////////////////////////////////////////////////////
 
 int highest_match(struct term *terms, int nterms, char *substr){
     int LHS = 0;
@@ -193,7 +188,6 @@ int highest_match(struct term *terms, int nterms, char *substr){
     }
 }
 
-////////////////////////////////////////////// Part 3 /////////////////////////////////////////////////////////////////
 int compare_weight(const void *a, const void *b){
 // sorts terms by highest weight to lowest weight
     struct term *t1 = (struct term *)a;
